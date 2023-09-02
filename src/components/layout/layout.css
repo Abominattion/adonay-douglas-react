@@ -1,11 +1,17 @@
 .container,
 .content {
   display: block;
-  width: 1200px;
+  width: 1800px;
   max-width: 90%;
   margin: 0 auto;
 }
 
 .content {
   padding: 60px 0;
+}
+
+.DisplayFlex {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
