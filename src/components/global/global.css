@@ -1,16 +1,17 @@
 .rounded-image {
   border-radius: 50%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 .glassCard {
-  max-width: 600px;
-  flex-basis: calc(50% - 20px);
-  background: rgba(0, 0, 0, 0.7);
+  /* max-width: 600px; */
+  /* flex-basis: calc(50% - 20px); */
+  background: rgba(0, 0, 0, 0.5);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(50px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 10px;
-  padding: 60px 40px;
+  padding: 40px 20px;
 }
 
 .FlyingImage {
@@ -28,4 +29,22 @@
   50% {
     transform: translateY(40px);
   }
+}
+
+.appBtn {
+  background-color: var(--color-primary);
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 8px 16px;
+  color: #ffffff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+  transition-duration: 0.3s;
 }

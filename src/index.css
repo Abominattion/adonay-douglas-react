@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700,900");
 
 :root {
-  --color-primary: #2d1159;
+  --color-primary: #7c6fee;
   --color-secondary: #fff;
 
   /* Contents  */
@@ -19,4 +19,10 @@ body {
 a {
   text-decoration: none;
   color: var(--color-secondary);
+  transition: all ease 0.5s;
+  font-weight: 600;
+}
+
+a:hover {
+  color: var(--color-primary);
 }

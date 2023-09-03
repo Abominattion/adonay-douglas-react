@@ -7,8 +7,11 @@ import DisplayFlex from "../layout/DisplayFlex";
 import Container from "../layout/Container";
 import TittleSecondary from "../global/TittleSecondary";
 import Anchor from "../global/Anchor";
+import { useState } from "react";
 
 function Header() {
+  const [appName] = useState("Adonay Douglas");
+
   const anchors = [
     { href: "#root", text: "Home" },
     { href: "#sobre", text: "Sobre" },
@@ -22,7 +25,7 @@ function Header() {
         <DisplayFlex alignItems={"center"} justifyContent={"space-between"}>
           <DisplayFlex alignItems={"center"} gap={10}>
             <RoundImage src={appLogo} width={40} height={40} />
-            <TittleSecondary text={"Adonay Douglas"} fontSize={32} />
+            <TittleSecondary text={appName} fontSize={24} />
           </DisplayFlex>
 
           <DisplayFlex alignItems={"center"} gap={10}>
