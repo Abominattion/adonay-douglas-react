@@ -15,10 +15,10 @@ function DisplayFlex({ children, justifyContent, alignItems, gap, height }) {
 
 DisplayFlex.propTypes = {
   children: PropTypes.element.isRequired,
-  justifyContent: PropTypes.string.isRequired,
+  justifyContent: PropTypes.string,
   alignItems: PropTypes.string.isRequired,
-  gap: PropTypes.number.isRequired,
-  height: PropTypes.string.isRequired,
+  gap: PropTypes.number,
+  height: PropTypes.string,
 };
 
 export default DisplayFlex;

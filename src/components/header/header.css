@@ -1,10 +1,85 @@
-header {
+.header-container {
   width: 100%;
-  background: rgba(0, 0, 0, 0.57);
-  backdrop-filter: blur(50px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-  position: fixed;
-  top: 0;
-  z-index: 2;
+  height: 250px;
+  background-image: url(./../../assets/images/backgrounds/cover.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.container-body {
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.container-master-relative {
+  width: 100%;
+  position: relative;
+}
+
+.content-realite-avatar {
+  width: 300px;
+  position: relative;
+}
+
+.content-avatar-absolute {
+  position: absolute;
+  top: -150px;
+  left: 0;
+  display: flex;
+  background-color: white;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.content-avatar-absolute img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease;
+}
+
+.navbar {
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+.user-description {
+  padding: 10px 0;
+}
+
+.nav-absolute {
+  padding: 10px 0;
+}
+
+.nav-absolute a {
+  margin: 0px 8px;
+}
+
+.social-medias {
+  max-width: 300px;
+}
+
+.social-medias a {
+  display: inline-block;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.active-true {
+  color: var(--color-primary);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.social-medias a:last-child {
+  border: none;
+}
+
+.social-medias a:hover i {
+  transform: scale(1.1);
+}
+
+.social-medias a i {
+  font-size: 30px;
 }

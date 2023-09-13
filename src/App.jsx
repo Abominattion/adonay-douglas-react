@@ -4,14 +4,16 @@
 import "./App.css";
 
 import Header from "./components/header/Header";
-import Hero from "./components/hero/Hero";
+// import Hero from "./components/hero/Hero";
 import Section from "./components/layout/Section";
+// import SwiperJs from "./components/swipper/swipper";
 
 function App() {
   return (
     <>
       <Header />
-      <Hero />
+      {/* <SwiperJs /> */}
+      {/* <Hero /> */}
       <Section />
     </>
   );

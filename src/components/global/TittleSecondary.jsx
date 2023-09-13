@@ -16,7 +16,7 @@ function TittleSecondary({ text, fontSize, textAlign }) {
 TittleSecondary.propTypes = {
   text: PropTypes.string.isRequired,
   fontSize: PropTypes.number.isRequired,
-  textAlign: PropTypes.string.isRequired,
+  textAlign: PropTypes.string,
 };
 
 export default TittleSecondary;

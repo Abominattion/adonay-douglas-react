@@ -13,7 +13,7 @@ RoundImage.propTypes = {
   src: PropTypes.string.isRequired,
   width: PropTypes.number.isRequired,
   height: PropTypes.number.isRequired,
-  textAlign: PropTypes.number.isRequired,
+  textAlign: PropTypes.number,
 };
 
 export default RoundImage;

@@ -16,7 +16,7 @@ function Anchor({ href, text, fontSize }) {
 Anchor.propTypes = {
   href: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
-  fontSize: PropTypes.number.isRequired,
+  fontSize: PropTypes.number,
 };
 
 export default Anchor;

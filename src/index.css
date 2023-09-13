@@ -3,6 +3,7 @@
 :root {
   --color-primary: #7c6fee;
   --color-secondary: #fff;
+  --color-default: #555555;
 
   /* Contents  */
   --body: rgba(3, 7, 18, 1);
@@ -10,19 +11,35 @@
 
 body {
   margin: 0;
-  background: var(--body);
-  color: var(--color-secondary);
+  /* background-image: url(./assets/images/backgrounds/hero-background2.svg); */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: var(--color-default);
   font-family: "Montserrat", sans-serif;
   scroll-behavior: smooth;
 }
 
 a {
   text-decoration: none;
-  color: var(--color-secondary);
+  color: var(--color-default);
   transition: all ease 0.5s;
   font-weight: 600;
 }
 
 a:hover {
   color: var(--color-primary);
+}
+
+h1 {
+  margin: 0;
+  color: var(--color-primary);
+}
+
+i {
+  color: var(--color-primary);
+  margin-right: 8px;
+  vertical-align: middle;
+  transition: all ease 0.5s;
 }
