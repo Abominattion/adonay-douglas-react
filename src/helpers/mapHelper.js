@@ -1,21 +1,26 @@
 const anchors = [
-  { href: "#root", text: "Home", icon: "fab fa-github", active: "active-true" },
+  {
+    href: "#root",
+    text: "Home",
+    icon: "fa-solid fa-house",
+    active: "active-true",
+  },
   {
     href: "#sobre",
     text: "Sobre",
-    icon: "fab fa-github",
+    icon: "fa-solid fa-circle-info",
     active: "active-false",
   },
   {
     href: "#portifolio",
     text: "Portifólio",
-    icon: "fab fa-github",
+    icon: "fa-solid fa-sheet-plastic",
     active: "active-false",
   },
   {
     href: "#contato",
     text: "Contato",
-    icon: "fab fa-github",
+    icon: "fa-solid fa-address-book",
     active: "active-false",
   },
 ];

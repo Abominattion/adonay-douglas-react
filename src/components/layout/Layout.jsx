@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 const Box = styled.div`
   display: block;
-  margin: 0 auto;
 `;
 
 const Container = styled.div`
@@ -14,7 +13,7 @@ const Container = styled.div`
 const ShadedContainer = styled.div`
   width: 100%;
   min-height: 150px;
-  background-color: white;
+  background-color: var(--header);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 `;
 

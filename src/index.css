@@ -1,23 +1,40 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700,900");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200&display=swap");
 
 :root {
   --color-primary: #7c6fee;
   --color-secondary: #fff;
   --color-default: #555555;
 
-  /* Contents  */
-  --body: rgba(3, 7, 18, 1);
+  /* ==== CONTAINERS ====  */
+  --body: rgb(241, 241, 241);
+  --header: #fff;
+}
+
+.darkmode {
+  --color-default: #fff;
+  --link-background: #4e4f50;
+
+  /* ==== CONTAINERS ====  */
+  --body: rgb(20, 20, 20);
+  --header: rgb(41, 41, 41);
+  --footer: rgb(41, 41, 41);
+}
+
+/* ==== RESET ==== */
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  /* background-image: url(./assets/images/backgrounds/hero-background2.svg); */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--body);
   color: var(--color-default);
-  font-family: "Montserrat", sans-serif;
   scroll-behavior: smooth;
 }
 

@@ -1,20 +1,22 @@
-// import { useState } from "react";
-// import reactLogo from "./assets/react.svg";
-// import viteLogo from "/vite.svg";
 import "./App.css";
 
 import Header from "./components/header/Header";
-// import Hero from "./components/hero/Hero";
-import Section from "./components/layout/Section";
-// import SwiperJs from "./components/swipper/swipper";
+import Hero from "./components/hero/Hero";
+// Helpers
+import { darkModeStorage } from "./helpers/darkModeHelper";
 
 function App() {
+  const htmlElement = document.documentElement.classList;
+  const darkMode = "darkmode";
+
+  // Define ou não o Dark mode
+  darkModeStorage ? htmlElement.add(darkMode) : htmlElement.remove(darkMode);
+
   return (
     <>
       <Header />
       {/* <SwiperJs /> */}
-      {/* <Hero /> */}
-      <Section />
+      <Hero />
     </>
   );
 }

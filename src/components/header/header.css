@@ -1,3 +1,8 @@
+.header {
+  width: 100%;
+  background-color: var(--header);
+}
+
 .container-body {
   width: 100%;
   background-color: white;
@@ -10,16 +15,16 @@
 }
 
 .content-realite-avatar {
-  width: 300px;
+  width: 250px;
   position: relative;
 }
 
 .content-avatar-absolute {
   position: absolute;
-  top: -150px;
+  top: -125px;
   left: 0;
   display: flex;
-  background-color: white;
+  background-color: var(--header);
   border-radius: 50%;
   padding: 5px;
 }
@@ -51,17 +56,8 @@
   max-width: 300px;
 }
 
-.social-medias a {
-  display: flex;
-  align-items: center;
-  padding: 10px 0;
-  color: var(--color-primary);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  padding: 8px;
-  border-radius: 8px;
-}
-
 .active-true {
+  background-color: var(--link-background);
   color: var(--color-primary);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   padding: 8px;
@@ -74,8 +70,4 @@
 
 .social-medias a:hover i {
   transform: scale(1.1);
-}
-
-.social-medias a i {
-  font-size: 22px;
 }

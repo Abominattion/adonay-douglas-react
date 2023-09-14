@@ -1,80 +1,47 @@
 import "./header.css";
 
 // Layouts
-import { Box, Container, DisplayFlex, ShadedContainer } from "../layout/Layout";
+import { Box, Container, DisplayFlex } from "../layout/Layout";
 
 // Globals
-import { RoundImage, Link } from "../global/Globals";
+import { RoundImage, Icon, Link } from "../global/Globals";
 
 // Images
-import avatar from "./../../assets/images/avatar.png";
-
-// Components
-import { CoverHeader } from "./Components";
+import appLogo from "./../../assets/images/icons/logo.png";
 
 // Helpers
-import { anchors, socialMedias } from "./../../helpers/mapHelper";
+import { anchors } from "./../../helpers/mapHelper";
+import ToggleDarkMode from "./ToggleDarkMode";
 
 function Header() {
-  const appName = "Adonay Douglas";
+  // Consts
   const altLogo = "Logo contendo um A branco com o fundo azul e rosa";
 
   return (
-    <Box>
-      <CoverHeader />
-      <ShadedContainer>
-        <Container>
-          <div className="container-master-relative">
-            <DisplayFlex>
-              <div className="content-realite-avatar">
-                <div className="content-avatar-absolute">
-                  <RoundImage src={avatar} alt={altLogo} />
-                </div>
-              </div>
-              <div className="navbar">
-                <DisplayFlex justifycontent="space-between" alignitems="center">
-                  <div className="user-description">
-                    <h1>{appName}</h1>
-                    <small>
-                      <strong>Desenvolvedor FullStack</strong>
-                    </small>
-                  </div>
-                  <div className="nav-absolute">
-                    {anchors.map((anchor, index) => (
-                      <Link
-                        href={anchor.href}
-                        key={index}
-                        fontSize={18}
-                        className={anchor.active}
-                      >
-                        <i className={anchor.icon}></i>
-                        {anchor.text}
-                      </Link>
-                    ))}
-                    <button>Darkmode</button>
-                  </div>
-                </DisplayFlex>
-
-                <div className="social-medias">
-                  <DisplayFlex justifycontent="space-between">
-                    {socialMedias.map((anchor, index) => (
-                      <Link
-                        href={anchor.href}
-                        key={index}
-                        fontSize={18}
-                        target="_blank"
-                      >
-                        <i className={anchor.icon}></i>
-                        {anchor.text}
-                      </Link>
-                    ))}
-                  </DisplayFlex>
-                </div>
-              </div>
+    <Box className="header">
+      <Container>
+        <DisplayFlex justifycontent="space-between" alignitems="center">
+          <Box>
+            <RoundImage src={appLogo} alt={altLogo} width={40} />
+          </Box>
+          <Box>
+            <DisplayFlex justifycontent="space-between" alignitems="center">
+              {anchors.map((anchor, index) => (
+                <Link
+                  href={anchor.href}
+                  key={index}
+                  fontsize="14px"
+                  className={anchor.active}
+                >
+                  <Icon className={anchor.icon} fontsize="14px"></Icon>
+                  {anchor.text}
+                </Link>
+              ))}
+              <ToggleDarkMode />
             </DisplayFlex>
-          </div>
-        </Container>
-      </ShadedContainer>
+          </Box>
+        </DisplayFlex>
+      </Container>
     </Box>
   );
 }
