@@ -1,15 +1,8 @@
-//import "./header.css";
-
 // Layouts
-import { Box, Container, DisplayFlex, ShadedContainer } from "../layout/Layout";
+import { Box, Container, DisplayFlex, ShadedContainer } from "../Layout";
 
 // Globals
-import {
-  RoundImage,
-  LinkWithBackground,
-  Icon,
-  TitlePrimary,
-} from "../global/Globals";
+import { RoundImage, LinkWithBackground, Icon, TitlePrimary } from "../Globals";
 
 // Images
 import avatar from "./../../assets/images/avatar.png";
