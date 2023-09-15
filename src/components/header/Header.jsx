@@ -4,7 +4,7 @@ import "./header.css";
 import { Box, Container, DisplayFlex } from "../layout/Layout";
 
 // Globals
-import { RoundImage, Icon, Link } from "../global/Globals";
+import { RoundImage, Icon, Link, TitlePrimary } from "../global/Globals";
 
 // Images
 import appLogo from "./../../assets/images/icons/logo.png";
@@ -15,15 +15,17 @@ import ToggleDarkMode from "./ToggleDarkMode";
 
 function Header() {
   // Consts
+  const appName = "Adonay Douglas";
   const altLogo = "Logo contendo um A branco com o fundo azul e rosa";
 
   return (
     <Box className="header">
       <Container>
         <DisplayFlex justifycontent="space-between" alignitems="center">
-          <Box>
+          <DisplayFlex justifycontent="space-between" alignitems="center">
             <RoundImage src={appLogo} alt={altLogo} width={40} />
-          </Box>
+            <TitlePrimary fontsize="22px">{appName}</TitlePrimary>
+          </DisplayFlex>
           <Box>
             <DisplayFlex justifycontent="space-between" alignitems="center">
               {anchors.map((anchor, index) => (

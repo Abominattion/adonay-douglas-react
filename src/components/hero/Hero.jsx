@@ -15,7 +15,15 @@ import {
 import avatar from "./../../assets/images/avatar.png";
 
 // Hero Styled Components
-import { CoverHeader } from "./HeroStyledComponents";
+import {
+  ContainerAbsoluteAvatar,
+  ContainerRelative,
+  ContainerRelativeAvatar,
+  CoverHeader,
+  HeroBody,
+  SocialMedias,
+  UserDescription,
+} from "./HeroStyledComponents";
 
 // Helpers
 import { socialMedias } from "./../../helpers/mapHelper";
@@ -23,6 +31,7 @@ import { socialMedias } from "./../../helpers/mapHelper";
 function Hero() {
   // Consts
   const appName = "Adonay Douglas";
+  const description = "Desenvolvedor FullStack";
   const altLogo = "Logo contendo um A branco com o fundo azul e rosa";
 
   return (
@@ -30,24 +39,23 @@ function Hero() {
       <CoverHeader />
       <ShadedContainer>
         <Container>
-          <Box className="container-master-relative">
-            <DisplayFlex>
-              <Box className="content-realite-avatar">
-                <Box className="content-avatar-absolute">
+          <ContainerRelative>
+            <DisplayFlex mobile_flex_box="column">
+              <ContainerRelativeAvatar>
+                <ContainerAbsoluteAvatar>
                   <RoundImage src={avatar} alt={altLogo} />
-                </Box>
-              </Box>
-              <Box className="navbar">
-                <Box>
-                  <Box className="user-description">
-                    <TitlePrimary fontsize="28px">{appName}</TitlePrimary>
-                    <small>
-                      <strong>Desenvolvedor FullStack</strong>
-                    </small>
-                  </Box>
-                </Box>
+                </ContainerAbsoluteAvatar>
+              </ContainerRelativeAvatar>
 
-                <Box className="social-medias">
+              <HeroBody>
+                <UserDescription>
+                  <TitlePrimary fontsize="28px">{appName}</TitlePrimary>
+                  <small>
+                    <strong>{description}</strong>
+                  </small>
+                </UserDescription>
+
+                <SocialMedias>
                   <DisplayFlex justifycontent="space-between">
                     {socialMedias.map((anchor, index) => (
                       <LinkWithBackground
@@ -61,10 +69,10 @@ function Hero() {
                       </LinkWithBackground>
                     ))}
                   </DisplayFlex>
-                </Box>
-              </Box>
+                </SocialMedias>
+              </HeroBody>
             </DisplayFlex>
-          </Box>
+          </ContainerRelative>
         </Container>
       </ShadedContainer>
     </Box>

@@ -23,6 +23,10 @@ const DisplayFlex = styled.div`
   align-items: ${(props) => props.alignitems || "normal"};
   flex-direction: ${(props) => props.flexdirection || "row"};
   gap: 5px;
+
+  @media screen and (max-width: 728px) {
+    flex-direction: ${(props) => props.mobile_flex_box || "row"};
+  }
 `;
 
 export { Box, Container, ShadedContainer, DisplayFlex };

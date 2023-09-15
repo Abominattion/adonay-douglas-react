@@ -2,9 +2,17 @@ import styled from "styled-components";
 
 const TitlePrimary = styled.h1`
   font-size: ${(props) => props.fontsize || "18px"};
+
+  @media screen and (max-width: 728px) {
+    // font-size: 20px;
+  }
 `;
 const TitleSecondary = styled.h2`
   font-size: ${(props) => props.fontsize || "18px"};
+
+  @media screen and (max-width: 728px) {
+    font-size: 16px;
+  }
 `;
 const RoundImage = styled.img`
   border-radius: 50%;
@@ -37,6 +45,10 @@ const LinkWithBackground = styled.a`
   font-size: ${(props) => props.fontsize || "18px"};
   &:hover {
     color: var(--color-default);
+  }
+
+  @media screen and (max-width: 728px) {
+    width: 100%;
   }
 `;
 
