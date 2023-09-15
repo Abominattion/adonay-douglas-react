@@ -5,6 +5,7 @@ import NavbarApp from "./components/navbarApp/NavbarApp";
 
 // Helpers
 import { darkModeStorage } from "./helpers/darkModeHelper";
+
 import Hero from "./components/hero/Hero";
 
 function App() {
