@@ -1,25 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import NavbarApp from "./components/navbarApp/NavbarApp";
+
+// Helpers
+import { darkModeStorage } from "./helpers/darkModeHelper";
 
 function App() {
+  const htmlElement = document.documentElement.classList;
+  const darkMode = "darkmode";
+
+  // Define ou não o Dark mode
+  darkModeStorage ? htmlElement.add(darkMode) : htmlElement.remove(darkMode);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <NavbarApp />
+    </>
   );
 }
 
