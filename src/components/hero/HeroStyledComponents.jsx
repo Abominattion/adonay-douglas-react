@@ -5,7 +5,7 @@ import { headerCover } from "../../helpers/ImportImages";
 
 const CoverHeader = styled.div`
   width: 100%;
-  height: 350px;
+  height: 450px;
   background-image: url(${headerCover});
   background-size: cover;
   background-position: center;
@@ -69,6 +69,10 @@ const SocialMedias = styled.div`
   max-width: 300px;
 
   a {
+    @media screen and (max-width: 728px) {
+      flex-basis: calc(50% - 5px);
+    }
+
     &:hover {
       i {
         transform: scale(1.1);

@@ -17,6 +17,11 @@ const ShadedContainer = styled.div`
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 `;
 
+const Section = styled.div`
+  padding: 120px 0;
+  min-height: 100vh;
+`;
+
 const DisplayFlex = styled.div`
   display: flex;
   justify-content: ${(props) => props.justifycontent || "start"};
@@ -26,7 +31,8 @@ const DisplayFlex = styled.div`
 
   @media screen and (max-width: 728px) {
     flex-direction: ${(props) => props.mobile_flex_box || "row"};
+    flex-wrap: wrap;
   }
 `;
 
-export { Box, Container, ShadedContainer, DisplayFlex };
+export { Box, Container, ShadedContainer, Section, DisplayFlex };

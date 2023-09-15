@@ -49,7 +49,7 @@ const LinkWithBackground = styled.a`
   }
 
   @media screen and (max-width: 728px) {
-    width: 100%;
+    // width: 100%;
   }
 `;
 

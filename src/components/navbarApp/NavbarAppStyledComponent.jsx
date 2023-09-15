@@ -1,10 +1,12 @@
 import styled from "styled-components";
 
 const NavBar = styled.div`
+  position: fixed;
   width: 100%;
   background-color: var(--header);
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   padding: 10px 0;
+  z-index: 10;
 `;
 
 const Nav = styled.div`
@@ -27,13 +29,14 @@ const NavContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-itens: center;
+  gap: 10px;
 
   @media screen and (max-width: 728px) {
     flex-direction: column;
     padding: 20px;
   }
 
-  a {
+  button {
     @media screen and (max-width: 728px) {
       font-size: 18px;
       margin: 10px 0;
@@ -46,6 +49,28 @@ const NavContainer = styled.div`
     i {
       font-size: 18px;
     }
+  }
+`;
+
+const NavLink = styled.button`
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+
+  color: var(--color-default);
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: ${(props) => props.fontsize || "18px"};
+  font-weight: 600;
+  max-height: 40px;
+  cursor: pointer;
+  border: none;
+  transition: all ease 0.5s;
+
+  &:hover {
+    background-color: var(--link-background);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 8px;
   }
 `;
 
@@ -100,4 +125,4 @@ const Hamburger = styled.span`
   }
 `;
 
-export { NavBar, Nav, NavContainer, MobileButton, Hamburger };
+export { NavBar, Nav, NavContainer, NavLink, MobileButton, Hamburger };
