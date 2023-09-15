@@ -9,6 +9,10 @@ const CoverHeader = styled.div`
   background-image: url(${headerCover});
   background-size: cover;
   background-position: center;
+
+  @media screen and (max-width: 728px) {
+    height: 250px;
+  }
 `;
 
 const ContainerRelative = styled.div`
@@ -50,6 +54,7 @@ const ContainerAbsoluteAvatar = styled.div`
 
 const HeroBody = styled.div`
   padding: 10px 0;
+  min-height: 200px;
 
   @media screen and (max-width: 728px) {
     padding: 80px 0px 30px 0px;
@@ -70,7 +75,10 @@ const SocialMedias = styled.div`
 
   a {
     @media screen and (max-width: 728px) {
+      height: 40px;
       flex-basis: calc(50% - 5px);
+      margin-bottom: 4px;
+      font-size: 16px;
     }
 
     &:hover {

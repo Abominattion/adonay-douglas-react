@@ -1,5 +1,5 @@
 // Header Cover
-import headerCover from "./../assets/images/backgrounds/hero-background2.svg";
+import headerCover from "./../assets/images/backgrounds/particles-background.webp";
 // Avatar
 import Avatar from "./../assets/images/avatar.png";
 

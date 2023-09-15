@@ -7,6 +7,12 @@ const NavBar = styled.div`
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   padding: 10px 0;
   z-index: 10;
+
+  @media screen and (max-width: 400px) {
+    img {
+      width: 40px;
+    }
+  }
 `;
 
 const Nav = styled.div`
@@ -28,7 +34,7 @@ const Nav = styled.div`
 const NavContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  align-itens: center;
+  align-items: center;
   gap: 10px;
 
   @media screen and (max-width: 728px) {
@@ -38,6 +44,7 @@ const NavContainer = styled.div`
 
   button {
     @media screen and (max-width: 728px) {
+      width: 100%;
       font-size: 18px;
       margin: 10px 0;
       padding: 20px;
@@ -50,6 +57,11 @@ const NavContainer = styled.div`
       font-size: 18px;
     }
   }
+
+  @media screen and (max-width: 400px) {
+    gap: 0px;
+    padding: 10px;
+  }
 `;
 
 const NavLink = styled.button`
@@ -58,7 +70,7 @@ const NavLink = styled.button`
   background-color: transparent;
 
   color: var(--color-default);
-  padding: 8px 20px;
+  padding: 8px 10px;
   border-radius: 8px;
   font-size: ${(props) => props.fontsize || "18px"};
   font-weight: 600;
@@ -72,12 +84,16 @@ const NavLink = styled.button`
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     border-radius: 8px;
   }
+
+  @media screen and (max-width: 400px) {
+    height: 40px;
+  }
 `;
 
 const MobileButton = styled.button`
   display: none;
   justify-content: space-between;
-  align-itens: center;
+  align-items: center;
   background-color: var(--color-primary);
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   color: var(--color-default);
@@ -89,6 +105,10 @@ const MobileButton = styled.button`
 
   @media screen and (max-width: 728px) {
     display: flex;
+  }
+
+  @media screen and (max-width: 400px) {
+    height: 40px;
   }
 `;
 

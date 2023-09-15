@@ -96,7 +96,7 @@ function NavbarApp() {
                 {anchors.map((anchor, index) => (
                   <NavLink
                     key={index}
-                    fontsize="14px"
+                    fontsize="18px"
                     className={anchor.active}
                     id={anchor.href + "-link"}
                     onClick={() => {
