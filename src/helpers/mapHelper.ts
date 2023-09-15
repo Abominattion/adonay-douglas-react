@@ -1,4 +1,19 @@
-const anchors = [
+// src/helpers/mapHelper.ts
+
+export interface Anchor {
+  href: string;
+  text: string;
+  icon: string;
+  active: string;
+}
+
+export interface SocialMedia {
+  href: string;
+  icon: string;
+  text: string;
+}
+
+const anchors: Anchor[] = [
   {
     href: "home",
     text: "Home",
@@ -25,7 +40,7 @@ const anchors = [
   },
 ];
 
-const socialMedias = [
+const socialMedias: SocialMedia[] = [
   {
     href: "https://github.com/oh-dony",
     icon: "fab fa-github",

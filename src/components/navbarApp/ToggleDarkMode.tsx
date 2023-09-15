@@ -9,11 +9,12 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 
 // Components
 import { MaterialUISwitch } from "./ToogleMaterialUi";
-import React from "react";
 
 function ToggleDarkMode() {
   // Use States
-  const [darkMode, setDarkModeState] = useState(darkModeStorage || false);
+  const [darkMode, setDarkModeState] = useState<boolean>(
+    darkModeStorage || false
+  );
 
   const setDarkMode = () => {
     const htmlElement = document.documentElement.classList;

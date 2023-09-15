@@ -1,5 +1,3 @@
-import React from "react";
-
 // Layouts
 import { Box, Container, DisplayFlex, ShadedContainer } from "../Layout";
 
@@ -10,7 +8,7 @@ import { RoundImage, LinkWithBackground, Icon, TitlePrimary } from "../Globals";
 import avatar from "./../../assets/images/avatar.png";
 
 // Helpers
-import { socialMedias } from "../../helpers/mapHelper";
+import { SocialMedia, socialMedias } from "../../helpers/mapHelper";
 
 // Hero Styled Components
 import {
@@ -52,7 +50,7 @@ function Hero() {
 
                 <SocialMedias>
                   <DisplayFlex justifycontent="space-between">
-                    {socialMedias.map((anchor, index) => (
+                    {socialMedias.map((anchor: SocialMedia, index) => (
                       <LinkWithBackground
                         href={anchor.href}
                         key={index}

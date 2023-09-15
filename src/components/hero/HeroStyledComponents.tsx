@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 // Images
-import { headerCover } from "../../helpers/ImportImages";
+import { headerCoverImage } from "../../helpers/ImportImages";
 
 const CoverHeader = styled.div`
   width: 100%;
   height: 450px;
-  background-image: url(${headerCover});
+  background-image: url(${headerCoverImage});
   background-size: cover;
   background-position: center;
 
