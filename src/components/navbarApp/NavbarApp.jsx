@@ -1,8 +1,8 @@
 // Layouts
-import { Box, Container, DisplayFlex } from "../layout/Layout";
+import { Box, Container, DisplayFlex } from "../Layout";
 
 // Globals
-import { RoundImage, Icon, Link } from "../global/Globals";
+import { RoundImage, Icon, Link } from "../Globals";
 
 // Images
 import appLogo from "./../../assets/images/icons/letra-a.gif";
