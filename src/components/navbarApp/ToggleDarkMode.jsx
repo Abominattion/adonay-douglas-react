@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 // Helpers
-import { darkModeStorage } from "./../../helpers/darkModeHelper";
+import { darkModeStorage } from "../../helpers/darkModeHelper";
 
 // Material UI
 import FormGroup from "@mui/material/FormGroup";

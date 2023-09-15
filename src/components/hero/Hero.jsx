@@ -14,6 +14,9 @@ import {
 // Images
 import avatar from "./../../assets/images/avatar.png";
 
+// Helpers
+import { socialMedias } from "./../../helpers/mapHelper";
+
 // Hero Styled Components
 import {
   ContainerAbsoluteAvatar,
@@ -24,9 +27,6 @@ import {
   SocialMedias,
   UserDescription,
 } from "./HeroStyledComponents";
-
-// Helpers
-import { socialMedias } from "./../../helpers/mapHelper";
 
 function Hero() {
   // Consts

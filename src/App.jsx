@@ -1,6 +1,6 @@
 import "./App.css";
 
-import Header from "./components/header/Header";
+import NavbarApp from "./components/navbarApp/NavbarApp";
 import Hero from "./components/hero/Hero";
 // Helpers
 import { darkModeStorage } from "./helpers/darkModeHelper";
@@ -14,7 +14,7 @@ function App() {
 
   return (
     <>
-      <Header />
+      <NavbarApp />
       {/* <SwiperJs /> */}
       <Hero />
     </>

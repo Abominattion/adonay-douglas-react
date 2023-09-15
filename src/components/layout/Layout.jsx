@@ -14,7 +14,7 @@ const ShadedContainer = styled.div`
   width: 100%;
   min-height: 150px;
   background-color: var(--header);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 `;
 
 const DisplayFlex = styled.div`

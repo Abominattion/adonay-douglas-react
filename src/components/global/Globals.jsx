@@ -26,9 +26,10 @@ const Link = styled.a`
   display: flex;
   align-items: center;
   color: var(--color-default);
-  padding: 8px 16px;
+  padding: 8px 20px;
   border-radius: 8px;
   font-size: ${(props) => props.fontsize || "18px"};
+  max-height: 40px;
   &:hover {
     color: var(--color-default);
   }
@@ -39,7 +40,7 @@ const LinkWithBackground = styled.a`
   align-items: center;
   background-color: var(--link-background);
   color: var(--color-default);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   padding: 8px 16px;
   border-radius: 8px;
   font-size: ${(props) => props.fontsize || "18px"};
