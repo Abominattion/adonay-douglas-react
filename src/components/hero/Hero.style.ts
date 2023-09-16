@@ -1,12 +1,9 @@
 import styled from "styled-components";
 
-// Images
-import { headerCoverImage } from "../../helpers/ImportImages";
-
 const CoverHeader = styled.div`
   width: 100%;
   height: 450px;
-  background-image: url(${headerCoverImage});
+  background-image: url(./backgrounds/particles-background.webp);
   background-size: cover;
   background-position: center;
 

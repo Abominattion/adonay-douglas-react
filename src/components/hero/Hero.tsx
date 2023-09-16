@@ -4,11 +4,17 @@ import { Box, Container, DisplayFlex, ShadedContainer } from "../Layout";
 // Globals
 import { RoundImage, LinkWithBackground, Icon, TitlePrimary } from "../Globals";
 
-// Images
-import avatar from "./../../assets/images/avatar.png";
-
 // Helpers
-import { SocialMedia, socialMedias } from "../../helpers/mapHelper";
+import { SocialMedia, socialMedias } from "../mocks/SocialMediasMock";
+
+// Enum Id Teste
+import { HeaderTestIdEnum } from "./enum/HeroTestIDEnum";
+
+// Constants
+import { USER_CONSTANTS } from "../constants/UserConstants";
+
+// Images
+import { USER_AVATAR } from "../constants/ImagesPathConstants";
 
 // Hero Styled Components
 import {
@@ -22,29 +28,29 @@ import {
 } from "./Hero.style";
 
 function Hero() {
-  // Consts
-  const appName = "Adonay Douglas";
-  const description = "Desenvolvedor FullStack";
-  const altLogo = "Logo contendo um A branco com o fundo azul e rosa";
-
   return (
     <Box>
       <CoverHeader />
       <ShadedContainer>
         <Container>
           <ContainerRelative>
-            <DisplayFlex mobile_flex_box="column">
+            <DisplayFlex
+              mobile="column"
+              data-testid={HeaderTestIdEnum.HERO_BODY_FLEX_BOX}
+            >
               <ContainerRelativeAvatar>
                 <ContainerAbsoluteAvatar>
-                  <RoundImage src={avatar} alt={altLogo} />
+                  <RoundImage src={USER_AVATAR.src} alt={USER_AVATAR.alt} />
                 </ContainerAbsoluteAvatar>
               </ContainerRelativeAvatar>
 
               <HeroBody>
                 <UserDescription>
-                  <TitlePrimary fontsize="28px">{appName}</TitlePrimary>
+                  <TitlePrimary fontSize="28px">
+                    {USER_CONSTANTS.name}
+                  </TitlePrimary>
                   <small>
-                    <strong>{description}</strong>
+                    <strong>{USER_CONSTANTS.desciption}</strong>
                   </small>
                 </UserDescription>
 
@@ -54,10 +60,14 @@ function Hero() {
                       <LinkWithBackground
                         href={anchor.href}
                         key={index}
-                        fontsize="12px"
+                        fontSize="12px"
                         target="_blank"
                       >
-                        <Icon className={anchor.icon} fontsize="18px"></Icon>
+                        <Icon
+                          className={anchor.icon}
+                          fontSize="18px"
+                          data-testid={HeaderTestIdEnum.HERO_SOCIAL_MEDIA_ICON}
+                        />
                         {anchor.text}
                       </LinkWithBackground>
                     ))}

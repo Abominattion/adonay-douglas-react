@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 interface StyledProps {
-  fontsize?: string;
+  fontSize?: string;
 }
 
 const TitlePrimary = styled.h1<StyledProps>`
-  font-size: ${(props) => props.fontsize || "18px"};
+  font-size: ${(props) => props.fontSize || "18px"};
 
   @media screen and (max-width: 728px) {
     // font-size: 20px;
@@ -13,7 +13,7 @@ const TitlePrimary = styled.h1<StyledProps>`
 `;
 
 const TitleSecondary = styled.h2<StyledProps>`
-  font-size: ${(props) => props.fontsize || "18px"};
+  font-size: ${(props) => props.fontSize || "18px"};
 
   @media screen and (max-width: 728px) {
     font-size: 16px;
@@ -34,7 +34,7 @@ const Link = styled.a<StyledProps>`
   color: var(--color-default);
   padding: 8px 20px;
   border-radius: 8px;
-  font-size: ${(props) => props.fontsize || "18px"};
+  font-size: ${(props) => props.fontSize || "18px"};
   max-height: 40px;
   &:hover {
     color: var(--color-default);
@@ -49,7 +49,7 @@ const LinkWithBackground = styled.a<StyledProps>`
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   padding: 8px 16px;
   border-radius: 8px;
-  font-size: ${(props) => props.fontsize || "18px"};
+  font-size: ${(props) => props.fontSize || "18px"};
   &:hover {
     color: var(--color-default);
   }
@@ -60,7 +60,7 @@ const LinkWithBackground = styled.a<StyledProps>`
 `;
 
 const Icon = styled.i<StyledProps>`
-  font-size: ${(props) => props.fontsize || "18px"};
+  font-size: ${(props) => props.fontSize || "18px"};
 `;
 
 export {

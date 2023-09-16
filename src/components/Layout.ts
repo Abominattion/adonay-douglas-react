@@ -5,7 +5,7 @@ interface StyledProps {
   justifycontent?: CSSProperties["justifyContent"];
   alignitems?: CSSProperties["alignItems"];
   flexdirection?: CSSProperties["flexDirection"];
-  mobile_flex_box?: CSSProperties["flexDirection"];
+  mobile?: CSSProperties["flexDirection"];
 }
 
 const Box = styled.div`
@@ -38,7 +38,7 @@ const DisplayFlex = styled.div<StyledProps>`
   gap: 5px;
 
   @media screen and (max-width: 728px) {
-    flex-direction: ${(props) => props.mobile_flex_box || "row"};
+    flex-direction: ${(props) => props.mobile || "row"};
     flex-wrap: wrap;
   }
 `;
