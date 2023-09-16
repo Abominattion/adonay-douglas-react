@@ -14,7 +14,6 @@ Estamos ansiosos para adicionar as seguintes funcionalidades emocionantes ao pro
 
 - **Escrita de Testes para o Menu**: Vamos escrever testes abrangentes para garantir que o menu funcione de forma confiável.
 - **Hooks para Git**: Vamos configurar hooks para Git, incluindo um pré-commit ou pré-push para automatizar a execução dos testes antes de confirmar ou enviar as alterações para o repositório.
-  r!
 
 ## Link de Prévia
 
