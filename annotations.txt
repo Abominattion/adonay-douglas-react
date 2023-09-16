@@ -1,0 +1,10 @@
+Tecnologias utilizadas:
+    React
+    Typescript
+    Vite 
+    Babel 
+    Jest 
+
+Próximas featues:
+    Escrever testes para o Menu
+    Criar um pre-commit ou pre-prush para rodar os testes 
