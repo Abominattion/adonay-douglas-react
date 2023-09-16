@@ -5,7 +5,7 @@ interface StyledProps {
   open_nav?: boolean;
 }
 
-const NavBar = styled.div<StyledProps>`
+const MenuApp = styled.div<StyledProps>`
   position: fixed;
   width: 100%;
   background-color: var(--header);
@@ -150,4 +150,4 @@ const Hamburger = styled.span<StyledProps>`
   }
 `;
 
-export { NavBar, Nav, NavContainer, NavLink, MobileButton, Hamburger };
+export { MenuApp, Nav, NavContainer, NavLink, MobileButton, Hamburger };

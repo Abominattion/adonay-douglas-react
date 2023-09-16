@@ -20,12 +20,12 @@ import {
   Hamburger,
   MobileButton,
   Nav,
-  NavBar,
+  MenuApp,
   NavContainer,
   NavLink,
-} from "./NavbarAppStyledComponent";
+} from "./Menu.style";
 
-function NavbarApp() {
+function Menu() {
   // States
   const [openNav, setOpenNav] = useState<boolean>(false);
 
@@ -89,7 +89,7 @@ function NavbarApp() {
   };
 
   return (
-    <NavBar>
+    <MenuApp>
       <Container>
         <DisplayFlex justifycontent="space-between" alignitems="center">
           <DisplayFlex justifycontent="space-between" alignitems="center">
@@ -125,8 +125,8 @@ function NavbarApp() {
           </MobileButton>
         </DisplayFlex>
       </Container>
-    </NavBar>
+    </MenuApp>
   );
 }
 
-export default NavbarApp;
+export default Menu;

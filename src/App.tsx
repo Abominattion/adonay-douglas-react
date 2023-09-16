@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 // Components
-import NavbarApp from "./components/navbarApp/NavbarApp";
+import Menu from "./components/menu/Menu";
 
 // Helpers
 import { darkModeStorage } from "./helpers/darkModeHelper";
@@ -32,7 +32,7 @@ function App() {
 
   return (
     <>
-      <NavbarApp />
+      <Menu />
       <Hero />
     </>
   );

@@ -19,7 +19,7 @@ import {
   HeroBody,
   SocialMedias,
   UserDescription,
-} from "./HeroStyledComponents";
+} from "./Hero.style";
 
 function Hero() {
   // Consts
