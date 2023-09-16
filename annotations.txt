@@ -7,4 +7,7 @@ Tecnologias utilizadas:
 
 Próximas featues:
     Escrever testes para o Menu
-    Criar um pre-commit ou pre-prush para rodar os testes 
+    Criar hooks para o git, um pre-commit ou pre-prush para rodar os testes 
+
+Link de previa:
+    adonay-douglas.vercel.app

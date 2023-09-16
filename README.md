@@ -1,16 +1,23 @@
 ## Meu portifólio pessoal
 
-Este é um projeto de exemplo que utiliza as seguintes tecnologias:
+Este projeto utiliza as seguintes tecnologias:
 
-- **React**: Uma biblioteca JavaScript para criar interfaces de usuário.
-- **TypeScript**: Uma linguagem de programação que se baseia em JavaScript, adicionando tipos estáticos.
-- **Vite**: Um construtor de projetos rápido e flexível que visa a melhor experiência de desenvolvimento.
-- **Babel**: Um compilador JavaScript que permite usar recursos modernos de JavaScript.
-- **Jest**: Um framework de teste de JavaScript com foco na simplicidade.
+- **React**: Uma biblioteca JavaScript para criar interfaces de usuário interativas e dinâmicas.
+- **TypeScript**: Uma linguagem de programação que estende o JavaScript adicionando tipos estáticos.
+- **Vite**: Um construtor de projetos que oferece desenvolvimento rápido e configuração zero.
+- **Babel**: Um compilador JavaScript que permite usar as mais recentes funcionalidades da linguagem.
+- **Jest**: Um framework de teste de JavaScript para garantir a qualidade do código.
 
 ## Próximas Funcionalidades
 
-Estou planejando adicionar as seguintes funcionalidades ao projeto:
+Estamos ansiosos para adicionar as seguintes funcionalidades emocionantes ao projeto:
 
-- **Escrita de Testes para o Menu**: Criar testes abrangentes para garantir que o menu funcione de forma confiável.
-- **Configuração de Hooks para o GIT**: Configurar um sistema de pré-commit ou pré-push para automatizar a execução dos testes antes de confirmar ou enviar as alterações para o repositório.
+- **Escrita de Testes para o Menu**: Vamos escrever testes abrangentes para garantir que o menu funcione de forma confiável.
+- **Hooks para Git**: Vamos configurar hooks para Git, incluindo um pré-commit ou pré-push para automatizar a execução dos testes antes de confirmar ou enviar as alterações para o repositório.
+  r!
+
+## Link de Prévia
+
+Você pode visualizar uma prévia do projeto no seguinte link:
+
+[Prévia do Projeto](https://adonay-douglas.vercel.app)
