@@ -102,14 +102,14 @@ function Menu() {
                 {anchors.map((anchor, index) => (
                   <NavLink
                     key={index}
-                    fontsize="18px"
+                    fontSize="18px"
                     className={anchor.active}
                     id={anchor.href + "-link"}
                     onClick={() => {
                       navigateTo(anchor.href);
                     }}
                   >
-                    <Icon className={anchor.icon} fontsize="14px"></Icon>
+                    <Icon className={anchor.icon} fontSize="14px"></Icon>
                     {anchor.text}
                   </NavLink>
                 ))}

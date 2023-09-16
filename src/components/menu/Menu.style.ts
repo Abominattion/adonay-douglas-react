@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 interface StyledProps {
-  fontsize?: string;
+  fontSize?: string;
   open_nav?: boolean;
 }
 
@@ -77,7 +77,7 @@ const NavLink = styled.button<StyledProps>`
   color: var(--color-default);
   padding: 8px 10px;
   border-radius: 8px;
-  font-size: ${(props) => props.fontsize || "18px"};
+  font-size: ${(props) => props.fontSize || "18px"};
   font-weight: 600;
   max-height: 40px;
   cursor: pointer;
