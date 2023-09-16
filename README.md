@@ -1,3 +1,5 @@
+## Meu portifólio pessoal
+
 Este é um projeto de exemplo que utiliza as seguintes tecnologias:
 
 - **React**: Uma biblioteca JavaScript para criar interfaces de usuário.
@@ -11,4 +13,4 @@ Este é um projeto de exemplo que utiliza as seguintes tecnologias:
 Estou planejando adicionar as seguintes funcionalidades ao projeto:
 
 - **Escrita de Testes para o Menu**: Criar testes abrangentes para garantir que o menu funcione de forma confiável.
-- **Configuração de Pré-Compromisso**: Configurar um sistema de pré-commit ou pré-push para automatizar a execução dos testes antes de confirmar ou enviar as alterações para o repositório.
+- **Configuração de Hooks para o GIT**: Configurar um sistema de pré-commit ou pré-push para automatizar a execução dos testes antes de confirmar ou enviar as alterações para o repositório.
