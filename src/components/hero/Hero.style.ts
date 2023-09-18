@@ -12,11 +12,6 @@ const CoverHeader = styled.div`
   }
 `;
 
-const ContainerRelative = styled.div`
-  width: 100%;
-  position: relative;
-`;
-
 const ContainerRelativeAvatar = styled.div`
   width: 250px;
   position: relative;
@@ -49,24 +44,6 @@ const ContainerAbsoluteAvatar = styled.div`
   }
 `;
 
-const HeroBody = styled.div`
-  padding: 10px 0;
-  min-height: 200px;
-
-  @media screen and (max-width: 768px) {
-    padding: 80px 0px 30px 0px;
-  }
-`;
-
-const UserDescription = styled.div`
-  padding: 10px 0;
-
-  @media screen and (max-width: 768px) {
-    text-align: center;
-    padding: 20px 0;
-  }
-`;
-
 const SocialMedias = styled.div`
   max-width: 300px;
   font-size: 14px;
@@ -92,10 +69,7 @@ const SocialMedias = styled.div`
 
 export {
   CoverHeader,
-  ContainerRelative,
   ContainerRelativeAvatar,
   ContainerAbsoluteAvatar,
-  HeroBody,
-  UserDescription,
   SocialMedias,
 };

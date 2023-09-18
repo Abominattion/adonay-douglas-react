@@ -1,8 +1,8 @@
 // Layouts
-import { Box, DisplayFlex, ShadedContainer } from "../Layout";
+import { Box, ShadedContainer } from "../Layout";
 
 // Globals
-import { RoundImage, LinkWithBackground, Icon, TitlePrimary } from "../Globals";
+import { RoundImage, LinkWithBackground, Icon } from "../Globals";
 
 // Helpers
 import { SocialMedia, socialMedias } from "../mocks/SocialMediasMock";
@@ -19,12 +19,9 @@ import { USER_AVATAR } from "../constants/ImagesPathConstants";
 // Hero Styled Components
 import {
   ContainerAbsoluteAvatar,
-  ContainerRelative,
   ContainerRelativeAvatar,
   CoverHeader,
-  HeroBody,
   SocialMedias,
-  UserDescription,
 } from "./Hero.style";
 
 function Hero() {
@@ -33,49 +30,45 @@ function Hero() {
       <CoverHeader />
       <ShadedContainer>
         <div className="container m-auto px-4 sm:px-6 md:px-8">
-          <ContainerRelative>
-            <DisplayFlex
-              mobile="column"
-              data-testid={HeaderTestIdEnum.HERO_BODY_FLEX_BOX}
-            >
-              <ContainerRelativeAvatar>
-                <ContainerAbsoluteAvatar>
-                  <RoundImage src={USER_AVATAR.src} alt={USER_AVATAR.alt} />
-                </ContainerAbsoluteAvatar>
-              </ContainerRelativeAvatar>
+          <div
+            className="flex flex-col md:flex-row"
+            data-testid={HeaderTestIdEnum.HERO_BODY_FLEX_BOX}
+          >
+            <ContainerRelativeAvatar>
+              <ContainerAbsoluteAvatar>
+                <RoundImage src={USER_AVATAR.src} alt={USER_AVATAR.alt} />
+              </ContainerAbsoluteAvatar>
+            </ContainerRelativeAvatar>
 
-              <HeroBody>
-                <UserDescription>
-                  <TitlePrimary fontSize="28px">
-                    {USER_CONSTANTS.name}
-                  </TitlePrimary>
-                  <small>
-                    <strong>{USER_CONSTANTS.desciption}</strong>
-                  </small>
-                </UserDescription>
+            <div className="min-h-[200px] pt-[80px] pb-7 md:ml-4 md:py-3">
+              <div className="py-5 text-center md:py-3 md:text-left">
+                <h1 className="text-2xl">{USER_CONSTANTS.name}</h1>
+                <small className="text-xs">
+                  <strong>{USER_CONSTANTS.desciption}</strong>
+                </small>
+              </div>
 
-                <SocialMedias>
-                  <div className="flex items-center justify-between flex-wrap md:flex-nowrap gap-2">
-                    {socialMedias.map((anchor: SocialMedia, index) => (
-                      <LinkWithBackground
-                        href={anchor.href}
-                        key={index}
-                        fontSize="12px"
-                        target="_blank"
-                      >
-                        <Icon
-                          className={anchor.icon}
-                          fontSize="14px"
-                          data-testid={HeaderTestIdEnum.HERO_SOCIAL_MEDIA_ICON}
-                        />
-                        {anchor.text}
-                      </LinkWithBackground>
-                    ))}
-                  </div>
-                </SocialMedias>
-              </HeroBody>
-            </DisplayFlex>
-          </ContainerRelative>
+              <SocialMedias>
+                <div className="flex items-center justify-between flex-wrap md:flex-nowrap gap-2">
+                  {socialMedias.map((anchor: SocialMedia, index) => (
+                    <LinkWithBackground
+                      href={anchor.href}
+                      key={index}
+                      fontSize="12px"
+                      target="_blank"
+                    >
+                      <Icon
+                        className={anchor.icon}
+                        fontSize="14px"
+                        data-testid={HeaderTestIdEnum.HERO_SOCIAL_MEDIA_ICON}
+                      />
+                      {anchor.text}
+                    </LinkWithBackground>
+                  ))}
+                </div>
+              </SocialMedias>
+            </div>
+          </div>
         </div>
       </ShadedContainer>
     </Box>

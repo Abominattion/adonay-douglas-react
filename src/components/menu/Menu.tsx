@@ -12,6 +12,7 @@ import ToggleDarkMode from "./ToggleDarkMode";
 
 // Menu Styled Components
 import { Hamburger, MobileButton, MenuApp } from "./Menu.style";
+import { MenuTestIDEnum } from "./enum/MenuTestIDEnum";
 
 function Menu() {
   // States
@@ -22,7 +23,7 @@ function Menu() {
   };
 
   return (
-    <Box>
+    <Box data-testid={MenuTestIDEnum.MENU_CONTAINER}>
       <MenuApp>
         <div className="container m-auto px-4 sm:px-6 md:px-8">
           <div className="flex items-center justify-between">
@@ -35,13 +36,16 @@ function Menu() {
             </div>
 
             <Box>
-              <Navbar openNav={openNav}>
+              <Navbar openNav={`${openNav}`}>
                 <ToggleDarkMode />
               </Navbar>
             </Box>
 
-            <MobileButton onClick={openNavbar}>
-              <Hamburger open_nav={openNav} />
+            <MobileButton
+              onClick={openNavbar}
+              data-testid={MenuTestIDEnum.MOBILE_BUTTON}
+            >
+              <Hamburger open_nav={`${openNav}`} />
             </MobileButton>
           </div>
         </div>
@@ -51,6 +55,7 @@ function Menu() {
         <Box
           className="md:hidden md:static absolute w-full h-full backdrop-blur-sm bg-[rgba(0,0,0,0.5)] z-10 cursor-pointer "
           onClick={openNavbar}
+          data-testid={MenuTestIDEnum.BACKDROP_BODY}
         />
       )}
     </Box>

@@ -9,6 +9,7 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 
 // Components
 import { MaterialUISwitch } from "./ToogleMaterialUi";
+import { MenuTestIDEnum } from "./enum/MenuTestIDEnum";
 
 function ToggleDarkMode() {
   // Use States
@@ -34,6 +35,7 @@ function ToggleDarkMode() {
             checked={darkMode}
             color="warning"
             onClick={setDarkMode}
+            data-testid={MenuTestIDEnum.SWITCH_DARK_MODE}
           />
         }
         label="DarkMode"

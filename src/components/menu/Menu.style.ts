@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 interface StyledProps {
   fontSize?: string;
-  open_nav?: boolean;
+  open_nav?: string;
 }
 
 const MenuApp = styled.div<StyledProps>`
@@ -24,7 +24,7 @@ const Nav = styled.div<StyledProps>`
     height: 100%;
     position: fixed;
     top: 0;
-    left: ${(props) => (props.open_nav ? 0 : "-100%")};
+    left: ${(props) => (props.open_nav == "true" ? 0 : "-100%")};
     background-color: var(--header);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     z-index: 20;
@@ -52,7 +52,8 @@ const MobileButton = styled.button<StyledProps>`
 const Hamburger = styled.span<StyledProps>`
   border-top: 2px solid;
   width: 20px;
-  border-top-color: ${(props) => (props.open_nav ? "transparent" : "")};
+  border-top-color: ${(props) =>
+    props.open_nav == "true" ? "transparent" : ""};
 
   &:after {
     content: "";
@@ -64,8 +65,9 @@ const Hamburger = styled.span<StyledProps>`
     transition: 0.3s;
     position: relative;
 
-    transform: ${(props) => (props.open_nav ? "rotate(-135deg)" : "")};
-    top: ${(props) => (props.open_nav ? "-7px" : "")};
+    transform: ${(props) =>
+      props.open_nav == "true" ? "rotate(-135deg)" : ""};
+    top: ${(props) => (props.open_nav == "true" ? "-7px" : "")};
   }
 
   &:before {
@@ -78,7 +80,7 @@ const Hamburger = styled.span<StyledProps>`
     transition: 0.3s;
     position: relative;
 
-    transform: ${(props) => (props.open_nav ? "rotate(135deg)" : "")};
+    transform: ${(props) => (props.open_nav == "true" ? "rotate(135deg)" : "")};
   }
 `;
 
