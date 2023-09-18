@@ -7,7 +7,7 @@ const CoverHeader = styled.div`
   background-size: cover;
   background-position: center;
 
-  @media screen and (max-width: 728px) {
+  @media screen and (max-width: 768px) {
     height: 250px;
   }
 `;
@@ -21,7 +21,7 @@ const ContainerRelativeAvatar = styled.div`
   width: 250px;
   position: relative;
 
-  @media screen and (max-width: 728px) {
+  @media screen and (max-width: 768px) {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -37,7 +37,7 @@ const ContainerAbsoluteAvatar = styled.div`
   border-radius: 50%;
   padding: 5px;
 
-  @media screen and (max-width: 728px) {
+  @media screen and (max-width: 768px) {
     width: 200px;
     top: -100px;
   }
@@ -53,7 +53,7 @@ const HeroBody = styled.div`
   padding: 10px 0;
   min-height: 200px;
 
-  @media screen and (max-width: 728px) {
+  @media screen and (max-width: 768px) {
     padding: 80px 0px 30px 0px;
   }
 `;
@@ -61,7 +61,7 @@ const HeroBody = styled.div`
 const UserDescription = styled.div`
   padding: 10px 0;
 
-  @media screen and (max-width: 728px) {
+  @media screen and (max-width: 768px) {
     text-align: center;
     padding: 20px 0;
   }
@@ -69,13 +69,13 @@ const UserDescription = styled.div`
 
 const SocialMedias = styled.div`
   max-width: 300px;
+  font-size: 14px;
 
   a {
-    @media screen and (max-width: 728px) {
+    @media screen and (max-width: 768px) {
       height: 40px;
       flex-basis: calc(50% - 5px);
       margin-bottom: 4px;
-      font-size: 16px;
     }
 
     &:hover {
@@ -85,7 +85,7 @@ const SocialMedias = styled.div`
     }
   }
 
-  @media screen and (max-width: 728px) {
+  @media screen and (max-width: 768px) {
     max-width: 100%;
   }
 `;

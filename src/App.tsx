@@ -34,6 +34,14 @@ function App() {
     <>
       <Menu />
       <Hero />
+
+      <section
+        className="min-h-screen"
+        id="sobre"
+        style={{ padding: "60px 0" }}
+      >
+        Sobre
+      </section>
     </>
   );
 }

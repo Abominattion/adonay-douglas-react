@@ -1,131 +1,59 @@
-import { useEffect, useState } from "react";
-
-// Helpers
-import { anchors } from "../../helpers/mapHelper";
+import { useState } from "react";
 
 // Images
-import appLogo from "./../../assets/images/icons/letra-a.gif";
+import { LOGO_APP } from "../constants/ImagesPathConstants";
 
 // Layouts
-import { Box, Container, DisplayFlex } from "../Layout";
-
-// Globals
-import { RoundImage, Icon } from "../Globals";
+import { Box } from "../Layout";
 
 // Components
+import Navbar from "./Navbar";
 import ToggleDarkMode from "./ToggleDarkMode";
 
-// Hero Styled Components
-import {
-  Hamburger,
-  MobileButton,
-  Nav,
-  MenuApp,
-  NavContainer,
-  NavLink,
-} from "./Menu.style";
+// Menu Styled Components
+import { Hamburger, MobileButton, MenuApp } from "./Menu.style";
 
 function Menu() {
   // States
   const [openNav, setOpenNav] = useState<boolean>(false);
 
-  // Consts
-  const altLogo = "Logo contendo um A branco com o fundo azul e rosa";
-
-  const changeActiveAnchor = (id: string) => {
-    const oldAchorActive = document.querySelector(".active-true");
-    const newAchorActive = document.getElementById(id + "-link");
-
-    if (oldAchorActive) {
-      oldAchorActive.classList.remove("active-true");
-    }
-
-    if (newAchorActive) {
-      newAchorActive.classList.add("active-true");
-    }
-  };
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (elemtnts) => {
-        elemtnts.forEach((elemtnt) => {
-          if (elemtnt.isIntersecting) {
-            const id = elemtnt.target.id;
-            changeActiveAnchor(id);
-          }
-        });
-      },
-      { threshold: 0.9 }
-    );
-
-    anchors.forEach((element) => {
-      const targetElement = document.getElementById(element.href);
-
-      if (targetElement) {
-        observer.observe(targetElement);
-      }
-    });
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
-
   const openNavbar = () => {
     setOpenNav(!openNav);
   };
 
-  const navigateTo = (id: string) => {
-    const section = document.getElementById(id);
-
-    changeActiveAnchor(id);
-
-    if (section) {
-      window.scrollTo({
-        top: section.offsetTop,
-        behavior: "smooth",
-      });
-    }
-  };
-
   return (
-    <MenuApp>
-      <Container>
-        <DisplayFlex justifycontent="space-between" alignitems="center">
-          <DisplayFlex justifycontent="space-between" alignitems="center">
-            <RoundImage src={appLogo} alt={altLogo} width={60} />
-          </DisplayFlex>
+    <Box>
+      <MenuApp>
+        <div className="container m-auto px-4 sm:px-6 md:px-8">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between">
+              <img
+                className="w-14 h-14"
+                src={LOGO_APP.src}
+                alt={LOGO_APP.alt}
+              />
+            </div>
 
-          <Box>
-            <Nav open_nav={openNav}>
-              <NavContainer>
-                {anchors.map((anchor, index) => (
-                  <NavLink
-                    key={index}
-                    fontSize="18px"
-                    className={anchor.active}
-                    id={anchor.href + "-link"}
-                    onClick={() => {
-                      navigateTo(anchor.href);
-                    }}
-                  >
-                    <Icon className={anchor.icon} fontSize="14px"></Icon>
-                    {anchor.text}
-                  </NavLink>
-                ))}
-                <NavLink>
-                  <ToggleDarkMode />
-                </NavLink>
-              </NavContainer>
-            </Nav>
-          </Box>
+            <Box>
+              <Navbar openNav={openNav}>
+                <ToggleDarkMode />
+              </Navbar>
+            </Box>
 
-          <MobileButton onClick={openNavbar}>
-            <Hamburger open_nav={openNav} />
-          </MobileButton>
-        </DisplayFlex>
-      </Container>
-    </MenuApp>
+            <MobileButton onClick={openNavbar}>
+              <Hamburger open_nav={openNav} />
+            </MobileButton>
+          </div>
+        </div>
+      </MenuApp>
+
+      {openNav && (
+        <Box
+          className="md:hidden md:static absolute w-full h-full backdrop-blur-sm bg-[rgba(0,0,0,0.5)] z-10 cursor-pointer "
+          onClick={openNavbar}
+        />
+      )}
+    </Box>
   );
 }
 

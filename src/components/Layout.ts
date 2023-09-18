@@ -37,7 +37,7 @@ const DisplayFlex = styled.div<StyledProps>`
   flex-direction: ${(props) => props.flexdirection || "row"};
   gap: 5px;
 
-  @media screen and (max-width: 728px) {
+  @media screen and (max-width: 768px) {
     flex-direction: ${(props) => props.mobile || "row"};
     flex-wrap: wrap;
   }

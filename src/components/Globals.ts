@@ -53,10 +53,6 @@ const LinkWithBackground = styled.a<StyledProps>`
   &:hover {
     color: var(--color-default);
   }
-
-  @media screen and (max-width: 728px) {
-    // width: 100%;
-  }
 `;
 
 const Icon = styled.i<StyledProps>`

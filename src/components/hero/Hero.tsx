@@ -1,5 +1,5 @@
 // Layouts
-import { Box, Container, DisplayFlex, ShadedContainer } from "../Layout";
+import { Box, DisplayFlex, ShadedContainer } from "../Layout";
 
 // Globals
 import { RoundImage, LinkWithBackground, Icon, TitlePrimary } from "../Globals";
@@ -32,7 +32,7 @@ function Hero() {
     <Box>
       <CoverHeader />
       <ShadedContainer>
-        <Container>
+        <div className="container m-auto px-4 sm:px-6 md:px-8">
           <ContainerRelative>
             <DisplayFlex
               mobile="column"
@@ -55,7 +55,7 @@ function Hero() {
                 </UserDescription>
 
                 <SocialMedias>
-                  <DisplayFlex justifycontent="space-between">
+                  <div className="flex items-center justify-between flex-wrap md:flex-nowrap gap-2">
                     {socialMedias.map((anchor: SocialMedia, index) => (
                       <LinkWithBackground
                         href={anchor.href}
@@ -65,18 +65,18 @@ function Hero() {
                       >
                         <Icon
                           className={anchor.icon}
-                          fontSize="18px"
+                          fontSize="14px"
                           data-testid={HeaderTestIdEnum.HERO_SOCIAL_MEDIA_ICON}
                         />
                         {anchor.text}
                       </LinkWithBackground>
                     ))}
-                  </DisplayFlex>
+                  </div>
                 </SocialMedias>
               </HeroBody>
             </DisplayFlex>
           </ContainerRelative>
-        </Container>
+        </div>
       </ShadedContainer>
     </Box>
   );

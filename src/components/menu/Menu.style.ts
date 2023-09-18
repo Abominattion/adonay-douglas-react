@@ -11,87 +11,23 @@ const MenuApp = styled.div<StyledProps>`
   background-color: var(--header);
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   padding: 10px 0;
-  z-index: 10;
-
-  @media screen and (max-width: 400px) {
-    img {
-      width: 40px;
-    }
-  }
+  z-index: 20;
 `;
 
 const Nav = styled.div<StyledProps>`
   width: 100%;
   transition: all ease 0.5s;
+  z-index: 20;
 
-  @media screen and (max-width: 728px) {
+  @media screen and (max-width: 768px) {
     width: 70%;
     height: 100%;
     position: fixed;
     top: 0;
-    left: ${(props) => (props.open_nav ? 0 : "-70%")};
+    left: ${(props) => (props.open_nav ? 0 : "-100%")};
     background-color: var(--header);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    z-index: 10;
-  }
-`;
-
-const NavContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-
-  @media screen and (max-width: 728px) {
-    flex-direction: column;
-    padding: 20px;
-  }
-
-  button {
-    @media screen and (max-width: 728px) {
-      width: 100%;
-      font-size: 18px;
-      margin: 10px 0;
-      padding: 20px;
-      background-color: var(--link-background);
-      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-      max-height: 60px;
-    }
-
-    i {
-      font-size: 18px;
-    }
-  }
-
-  @media screen and (max-width: 400px) {
-    gap: 0px;
-    padding: 10px;
-  }
-`;
-
-const NavLink = styled.button<StyledProps>`
-  display: flex;
-  align-items: center;
-  background-color: transparent;
-
-  color: var(--color-default);
-  padding: 8px 10px;
-  border-radius: 8px;
-  font-size: ${(props) => props.fontSize || "18px"};
-  font-weight: 600;
-  max-height: 40px;
-  cursor: pointer;
-  border: none;
-  transition: all ease 0.5s;
-
-  &:hover {
-    background-color: var(--link-background);
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    border-radius: 8px;
-  }
-
-  @media screen and (max-width: 400px) {
-    height: 40px;
+    z-index: 20;
   }
 `;
 
@@ -108,12 +44,8 @@ const MobileButton = styled.button<StyledProps>`
   cursor: pointer;
   transition: all ease 0.5s;
 
-  @media screen and (max-width: 728px) {
+  @media screen and (max-width: 768px) {
     display: flex;
-  }
-
-  @media screen and (max-width: 400px) {
-    height: 40px;
   }
 `;
 
@@ -150,4 +82,4 @@ const Hamburger = styled.span<StyledProps>`
   }
 `;
 
-export { MenuApp, Nav, NavContainer, NavLink, MobileButton, Hamburger };
+export { MenuApp, Nav, MobileButton, Hamburger };
