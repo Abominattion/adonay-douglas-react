@@ -16,7 +16,7 @@ jest.mock("./../../constants/ImagesPathConstants", () => ({
 }));
 
 describe("Testando o Menu", () => {
-  it("renders without errors", () => {
+  it("renderizando sem erros", () => {
     const { getByAltText } = render(<Menu />);
     const logo = getByAltText("Logo Alt");
 
