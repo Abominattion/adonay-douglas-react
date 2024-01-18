@@ -26,8 +26,30 @@ const ShadedContainer = styled.div`
 `;
 
 const Section = styled.div`
-  padding: 120px 0;
+  background-image: url(./backgrounds/section-background.svg);
+  background-size: cover;
+  background-position: bottom;
+  padding: 60px 0;
   min-height: 100vh;
+`;
+
+const SectionContainer = styled.div`
+  width: 100%;
+  background-color: var(--header);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 8px;
+  padding: 40px;
+`;
+
+const SectionHeaderContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const SectionHeader = styled.div`
+  max-width: 660px;
+  text-align: center;
 `;
 
 const DisplayFlex = styled.div<StyledProps>`
@@ -43,4 +65,13 @@ const DisplayFlex = styled.div<StyledProps>`
   }
 `;
 
-export { Box, Container, ShadedContainer, Section, DisplayFlex };
+export {
+  Box,
+  Container,
+  ShadedContainer,
+  SectionContainer,
+  Section,
+  SectionHeaderContainer,
+  SectionHeader,
+  DisplayFlex,
+};

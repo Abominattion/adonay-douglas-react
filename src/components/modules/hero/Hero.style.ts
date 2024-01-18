@@ -8,7 +8,7 @@ const CoverHeader = styled.div`
   background-position: center;
 
   @media screen and (max-width: 768px) {
-    height: 250px;
+    height: 350px;
   }
 `;
 

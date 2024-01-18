@@ -4,7 +4,7 @@ import { useState } from "react";
 import { LOGO_APP } from "../constants/ImagesPathConstants";
 
 // Layouts
-import { Box } from "../Layout";
+import { Box } from "../shared/Layout";
 
 // Components
 import Navbar from "./Navbar";

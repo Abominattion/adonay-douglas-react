@@ -1,20 +1,20 @@
 // Layouts
-import { Box, ShadedContainer } from "../Layout";
+import { Box, ShadedContainer } from "../../shared/Layout";
 
 // Globals
-import { RoundImage, LinkWithBackground, Icon } from "../Globals";
+import { RoundImage, LinkWithBackground, Icon } from "../../shared/Globals";
 
 // Helpers
-import { SocialMedia, socialMedias } from "../mocks/SocialMediasMock";
+import { SocialMedia, socialMedias } from "./../../mocks/SocialMediasMock";
 
 // Enum Id Teste
 import { HeaderTestIdEnum } from "./enum/HeroTestIDEnum";
 
 // Constants
-import { USER_CONSTANTS } from "../constants/UserConstants";
+import { USER_CONSTANTS } from "./../../constants/UserConstants";
 
 // Images
-import { USER_AVATAR } from "../constants/ImagesPathConstants";
+import { USER_AVATAR } from "./../../constants/ImagesPathConstants";
 
 // Hero Styled Components
 import {
@@ -46,6 +46,9 @@ function Hero() {
                 <small className="text-xs">
                   <strong>{USER_CONSTANTS.desciption}</strong>
                 </small>
+                <div>
+                  <small>PHP | Laravel | Javascript | Vue.js | React</small>
+                </div>
               </div>
 
               <SocialMedias>
